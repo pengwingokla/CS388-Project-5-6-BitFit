@@ -85,4 +85,44 @@ class SQLiteHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, n
         return foodList
     }
 
+    @SuppressLint("Range")
+    fun getTotalCalories(): Int {
+        val db = this.readableDatabase
+        val selectQuery = "SELECT $CALORIES FROM $TABLE_FOODTRACKER"
+        val cursor = db.rawQuery(selectQuery, null)
+
+        var totalCalories = 0
+
+        if (cursor.moveToFirst()) {
+            do {
+                val calories = cursor.getInt(cursor.getColumnIndex(CALORIES))
+                totalCalories += calories
+            } while (cursor.moveToNext())
+        }
+
+        cursor.close()
+        return totalCalories
+    }
+
+    @SuppressLint("Range")
+    fun getAverageCalories(): Double {
+        val db = this.readableDatabase
+        val selectQuery = "SELECT AVG($CALORIES) AS averageCalories FROM $TABLE_FOODTRACKER"
+        val cursor = db.rawQuery(selectQuery, null)
+
+        var averageCalories = 0.0
+
+        if (cursor.moveToFirst()) {
+            averageCalories = cursor.getDouble(cursor.getColumnIndex("averageCalories"))
+        }
+
+        cursor.close()
+        return averageCalories
+    }
+
+    fun deleteAllFood(): Int {
+        val db = this.writableDatabase
+        return db.delete(TABLE_FOODTRACKER, null, null)
+    }
+
 }

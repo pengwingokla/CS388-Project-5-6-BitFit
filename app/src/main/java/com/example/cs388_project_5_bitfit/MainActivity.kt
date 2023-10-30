@@ -15,6 +15,8 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
     private lateinit var foodList: ArrayList<TrackerModel>
     private lateinit var btnAdd: Button
+    private lateinit var btnRemoveAll: Button
+    private lateinit var btnTab: Button
     private lateinit var sqliteHelper: SQLiteHelper
     private lateinit var recyclerView: RecyclerView
     private var adapter: FoodItemAdapter? = null
@@ -25,6 +27,8 @@ class MainActivity : AppCompatActivity() {
 
         sqliteHelper = SQLiteHelper(this)
         btnAdd = findViewById(R.id.addButton)
+        btnTab = findViewById(R.id.Tab2Button)
+        btnRemoveAll = findViewById(R.id.removeallButton)
 
         btnAdd.setOnClickListener {
             // Create an Intent to open the InputScreen
@@ -41,6 +45,24 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
+        // Dashboard
+        btnTab.setOnClickListener{
+            // Create an Intent to open the Dashboard Screen
+            val intentDashboard = Intent(this, Dashboard::class.java)
+            startActivity(intentDashboard)
+        }
+        // Remove All
+        btnRemoveAll.setOnClickListener {
+            val deletedRows = sqliteHelper.deleteAllFood()
+            if (deletedRows > 0) {
+                Toast.makeText(this, "All data removed from the database.", Toast.LENGTH_SHORT).show()
+                // Refresh the RecyclerView to reflect the changes
+                adapter?.clearData()
+            } else {
+                Toast.makeText(this, "No data to remove.", Toast.LENGTH_SHORT).show()
+            }
+
+        }
 
     }
 

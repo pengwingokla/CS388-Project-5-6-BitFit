@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/averageCaloriesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Average Calories:"
+        android:textSize="24sp"
+        android:fontFamily="@font/asap"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/valueCaloriesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/averageCaloriesTextView"
+        android:layout_marginLeft="20dp"
+        android:text="0"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/targetCaloriesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/valueCaloriesTextView"
+        android:text="Target Calories:"
+        android:textSize="24sp"
+        android:fontFamily="@font/asap"
+        android:layout_marginLeft="20dp"/>
+
+    <ProgressBar
+        android:id="@+id/caloriesProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/targetCaloriesTextView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="100" />
+
+    <LinearLayout
+        android:id="@+id/tabBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true">
+
+        <!-- Tab 1 Button -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+            android:fontFamily="@font/asap"
+            android:text="Tab 1"
+            android:textAllCaps="true"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <!-- Tab 2 Button -->
+        <Button
+            android:id="@+id/Tab2Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+            android:fontFamily="@font/asap"
+            android:text="Tab 2"
+            android:textAllCaps="true"
+            android:textColor="#000"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

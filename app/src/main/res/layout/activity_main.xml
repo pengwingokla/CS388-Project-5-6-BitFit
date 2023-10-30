@@ -10,7 +10,8 @@
         android:id="@+id/bannerLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="16dp"
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/fitnessIcon"
@@ -38,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8"
+        app:layout_constraintGuide_percent="0.89"
         />
 
     <!-- RecyclerView -->
@@ -47,24 +48,69 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#ede9e8"
-        app:layout_constraintTop_toBottomOf="@id/bannerLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@id/guideline"
-        android:padding="10dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bannerLayout"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <!-- Button -->
     <Button
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:fontFamily="@font/asap"
-        android:text="Add Food"
+        android:layout_marginRight="10dp"
         android:backgroundTint="@android:color/holo_green_light"
+        android:text="Add"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mainRecyclerView" />
+        app:layout_constraintBottom_toTopOf="@id/removeallButton"/>
+
+    <Button
+        android:id="@+id/removeallButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="Remove All"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tabBar"/>
+
+    <LinearLayout
+        android:id="@+id/tabBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        ,<!-- Tab 1 Button -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tab 1"
+            android:textColor="#000"
+            android:fontFamily="@font/asap"
+            android:textSize="18sp"
+            android:backgroundTint="@android:color/transparent"
+            android:textAllCaps="true" />
+
+        <!-- Tab 2 Button -->
+        <Button
+            android:id="@+id/Tab2Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tab 2"
+            android:textColor="#000"
+            android:fontFamily="@font/asap"
+            android:textSize="18sp"
+            android:backgroundTint="@android:color/transparent"
+            android:textAllCaps="true" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

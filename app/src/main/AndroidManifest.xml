@@ -13,6 +13,12 @@
         android:theme="@style/Theme.CS388Project5BitFit"
         tools:targetApi="31">
         <activity
+            android:name=".Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardScreen"
+            android:exported="false" />
+        <activity
             android:name=".InputScreen"
             android:exported="false" />
         <activity
