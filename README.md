@@ -1,10 +1,10 @@
-# Android Project 5 - *Name of App Here*
+# Android Project 5 - BitFit
 
 Submitted by: **Your Name Here**
 
 **Name of your app** is a health metrics app that allows users to track ... [TODO] 
 
-Time spent: **X** hours spent in total
+Time spent: **7** hours spent in total
 
 ## Required Features
 
@@ -30,15 +30,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+https://drive.google.com/file/d/1LBqgWCAF5c7R3VdWeKntLMwuEzZ3RdW6/view?usp=sharing
 
 ## Notes
 
