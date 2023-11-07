@@ -6,14 +6,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Banner layout -->
+    <LinearLayout
+        android:id="@+id/bannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/fitnessIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/vegetables"
+            android:contentDescription="Fitness Icon" />
+
+        <TextView
+            android:id="@+id/bannerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BitFit"
+            android:textColor="#000"
+            android:fontFamily="@font/asap"
+            android:textSize="25sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
     <TextView
         android:id="@+id/averageCaloriesTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/bannerLayout"
         android:text="Average Calories:"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:fontFamily="@font/asap"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:layout_marginLeft="20dp"/>
 
     <TextView
@@ -23,7 +52,7 @@
         android:layout_below="@id/averageCaloriesTextView"
         android:layout_marginLeft="20dp"
         android:text="0"
-        android:textSize="24sp"/>
+        android:textSize="22sp"/>
 
     <TextView
         android:id="@+id/targetCaloriesTextView"
@@ -32,20 +61,55 @@
         android:layout_marginTop="20dp"
         android:layout_below="@id/valueCaloriesTextView"
         android:text="Target Calories:"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:fontFamily="@font/asap"
         android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/valueTargetCaloriesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/targetCaloriesTextView"
+        android:layout_marginLeft="20dp"
+        android:text="0"
+        android:textSize="22sp"/>
 
     <ProgressBar
         android:id="@+id/caloriesProgressBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/targetCaloriesTextView"
+        android:layout_below="@id/valueTargetCaloriesTextView"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         style="?android:attr/progressBarStyleHorizontal"
         android:max="100" />
+
+    <TextView
+        android:id="@+id/percentageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/caloriesProgressBar"
+        android:text="Your progress | 0% of target"
+        android:textSize="13sp"
+        android:fontFamily="@font/asap"
+        android:layout_marginLeft="20dp"/>
+
+    <!-- Tabs Bar -->
+    <Button
+        android:id="@+id/setCaloriesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tabBar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="Set Target Calories"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
         android:id="@+id/tabBar"
@@ -58,6 +122,7 @@
 
         <!-- Tab 1 Button -->
         <Button
+            android:id="@+id/Tab1Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

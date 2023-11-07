@@ -14,9 +14,10 @@ class SQLiteHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, n
         private const val DATABASE_VERSION = 1
         private const val DATABASE_NAME = "foodtracker.db"
         private const val TABLE_FOODTRACKER = "tbl_foodtracker"
-        //private const val ID =  "id"
+        private const val TABLE_TARGET_CALORIES = "tbl_target_calories"
         private const val FOOD = "food"
         private const val CALORIES = "calories"
+        private const val TARGET_CALORIES = "target_calories"
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
@@ -26,7 +27,12 @@ class SQLiteHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, n
                 + CALORIES + " TEXT"
                 + ")")
 
+        val createTableTargetCalories = ("CREATE TABLE $TABLE_TARGET_CALORIES ("
+                + "$TARGET_CALORIES INTEGER" +
+                ")")
+
         db?.execSQL(createTableFoodTracker)
+        db?.execSQL(createTableTargetCalories)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
@@ -66,7 +72,6 @@ class SQLiteHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, n
             return ArrayList()
         }
 
-        var id: Int
         var food: String
         var calories: Int
 
@@ -119,10 +124,48 @@ class SQLiteHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, n
         cursor.close()
         return averageCalories
     }
-
     fun deleteAllFood(): Int {
         val db = this.writableDatabase
         return db.delete(TABLE_FOODTRACKER, null, null)
+    }
+    fun setTargetCalories(targetCalories: Int): Long {
+        val db = this.writableDatabase
+
+        val contentValues = ContentValues()
+        contentValues.put(TARGET_CALORIES, targetCalories)
+
+        // Replace the existing target calories value if it already exists
+        val existingTargetCalories = getTargetCalories()
+        if (existingTargetCalories != null) {
+            val whereClause = "$TARGET_CALORIES = ?"
+            val whereArgs = arrayOf(existingTargetCalories.toString())
+            db.update(TABLE_TARGET_CALORIES, contentValues, whereClause, whereArgs)
+        } else {
+            // If the target calories value doesn't exist, insert a new one
+            val success = db.insert(TABLE_TARGET_CALORIES, null, contentValues)
+            db.close()
+            return success
+        }
+
+        db.close()
+        return 0
+    }
+
+    // Helper method to get the current target calories value
+    @SuppressLint("Range")
+    private fun getTargetCalories(): Int? {
+        val db = this.readableDatabase
+        val selectQuery = "SELECT $TARGET_CALORIES FROM $TABLE_TARGET_CALORIES"
+        val cursor = db.rawQuery(selectQuery, null)
+
+        var targetCalories: Int? = null
+
+        if (cursor.moveToFirst()) {
+            targetCalories = cursor.getInt(cursor.getColumnIndex(TARGET_CALORIES))
+        }
+
+        cursor.close()
+        return targetCalories
     }
 
 }

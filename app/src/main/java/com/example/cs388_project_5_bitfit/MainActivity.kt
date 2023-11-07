@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var foodList: ArrayList<TrackerModel>
     private lateinit var btnAdd: Button
     private lateinit var btnRemoveAll: Button
-    private lateinit var btnTab: Button
+    private lateinit var btnDashboardTab: Button
     private lateinit var sqliteHelper: SQLiteHelper
     private lateinit var recyclerView: RecyclerView
     private var adapter: FoodItemAdapter? = null
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         sqliteHelper = SQLiteHelper(this)
         btnAdd = findViewById(R.id.addButton)
-        btnTab = findViewById(R.id.Tab2Button)
+        btnDashboardTab = findViewById(R.id.Tab2Button)
         btnRemoveAll = findViewById(R.id.removeallButton)
 
         btnAdd.setOnClickListener {
@@ -45,8 +45,8 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Dashboard
-        btnTab.setOnClickListener{
+        // GO TO Dashboard Tab
+        btnDashboardTab.setOnClickListener{
             // Create an Intent to open the Dashboard Screen
             val intentDashboard = Intent(this, Dashboard::class.java)
             startActivity(intentDashboard)
