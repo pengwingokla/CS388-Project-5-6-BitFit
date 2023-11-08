@@ -1,10 +1,10 @@
-# Android Project 5 - *Name of App Here*
+# Android Project 5 and 6 - BitFit
 
-Submitted by: **Your Name Here**
+Submitted by: Nguyen Thai Thao Uyen
 
-**Name of your app** is a health metrics app that allows users to track ... [TODO] 
+BitFit is a health metrics app that allows users to track user intake calories and compare it to their target calories
 
-Time spent: **X** hours spent in total
+Time spent: 5 hours spent in total
 
 ## Required Features
 
@@ -18,9 +18,9 @@ The following **required** functionality is completed:
  
 The following **optional** features are implemented:
 
-- [ ] **Create a UI for tracking averages and trends in metrics**
-- [ ] **Improve and customize the user interface through styling and coloring**
-- [ ] **Implement orientation responsivity**
+- [X] **Create a UI for tracking averages and trends in metrics**
+- [X] **Improve and customize the user interface through styling and coloring**
+- [X] **Implement orientation responsivity**
 - [ ] **Add a daily photo feature**
 
 The following **additional** features are implemented:
