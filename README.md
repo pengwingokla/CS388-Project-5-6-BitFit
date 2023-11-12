@@ -2,9 +2,9 @@
 
 Submitted by: Nguyen Thai Thao Uyen
 
-**Name of your app** is a health metrics app that allows users to track ... [TODO] 
+**BitFit** is a health metrics app that allows users to track user intake calories and compare it to their target calories
 
-Time spent: **X** hours spent in total
+Time spent: 5 hours spent in total
 
 ## Required Features
 
