@@ -53,7 +53,7 @@
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        ,<!-- Home Button -->
+        <!-- Home Button -->
         <Button
             android:id="@+id/HomeButton"
             android:layout_width="0dp"

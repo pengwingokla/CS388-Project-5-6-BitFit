@@ -12,9 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Banner layout -->
-        <!-- ... your banner layout code ... -->
-
         <TextView
             android:id="@+id/averageCaloriesTextView"
             android:layout_width="wrap_content"
@@ -35,10 +32,30 @@
             android:textSize="22sp"/>
 
         <TextView
-            android:id="@+id/targetCaloriesTextView"
+            android:id="@+id/totalCaloriesTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/valueCaloriesTextView"
+            android:layout_marginTop="20dp"
+            android:text="Total Calories:"
+            android:textSize="22sp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/valueTotalCaloriesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/totalCaloriesTextView"
+            android:layout_marginLeft="20dp"
+            android:text="0"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:id="@+id/targetCaloriesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/valueTotalCaloriesTextView"
             android:layout_marginTop="20dp"
             android:text="Target Calories:"
             android:textSize="22sp"
@@ -75,5 +92,18 @@
             android:textSize="13sp"
             android:fontFamily="@font/inter"
             android:layout_marginLeft="20dp"/>
+
+        <!-- Set Target Button -->
+        <Button
+            android:id="@+id/setTargetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/caloriesProgressBar"
+            android:layout_below="@id/valueProgressTextView"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:text="Set Target Calories"
+            android:textColor="@color/black" />
     </RelativeLayout>
 </FrameLayout>
