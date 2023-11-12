@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_Analytics">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Banner layout -->
+        <!-- ... your banner layout code ... -->
+
+        <TextView
+            android:id="@+id/averageCaloriesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Average Calories:"
+            android:textSize="22sp"
+            android:fontFamily="@font/inter"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/valueCaloriesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/averageCaloriesTextView"
+            android:layout_marginLeft="20dp"
+            android:text="0"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:id="@+id/targetCaloriesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/valueCaloriesTextView"
+            android:layout_marginTop="20dp"
+            android:text="Target Calories:"
+            android:textSize="22sp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/valueTargetCaloriesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/targetCaloriesTextView"
+            android:layout_marginLeft="20dp"
+            android:text="0"
+            android:textSize="22sp"/>
+
+        <ProgressBar
+            android:id="@+id/caloriesProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/valueTargetCaloriesTextView"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/valueProgressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/caloriesProgressBar"
+            android:layout_marginTop="5dp"
+            android:text="Your progress | 0% of target"
+            android:textSize="13sp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="20dp"/>
+    </RelativeLayout>
+</FrameLayout>
