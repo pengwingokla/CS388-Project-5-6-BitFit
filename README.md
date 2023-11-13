@@ -23,7 +23,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-[![Watch the video]([https://example.com/path/to/shared/drive/video.mp4](https://drive.google.com/file/d/1JrNVV8kF8fxritR12RxIhX7SB5pJ4m13/view?usp=sharing))
+![Watch the video]([https://example.com/path/to/shared/drive/video.mp4](https://drive.google.com/file/d/1JrNVV8kF8fxritR12RxIhX7SB5pJ4m13/view?usp=sharing))
 
 
 
