@@ -23,7 +23,10 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-[<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />](https://drive.google.com/file/d/1JrNVV8kF8fxritR12RxIhX7SB5pJ4m13/view?usp=sharing)
+[![Watch the video] 
+[![Watch the video](https://drive.google.com/file/d/1oYNMbIxY2b7Y6cShdz_Xy8OU4rg2igl9/view?usp=sharing)]([https://example.com/path/to/shared/drive/video.mp4](https://drive.google.com/file/d/1JrNVV8kF8fxritR12RxIhX7SB5pJ4m13/view?usp=sharing))
+
+
 
 ## Notes
 
