@@ -1,4 +1,4 @@
-# Android Project 5 and 6 - BitFit
+# Android Project 5 - BitFit
 
 Submitted by: Nguyen Thai Thao Uyen
 
