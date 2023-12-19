@@ -36,7 +36,7 @@ https://drive.google.com/file/d/1JrNVV8kF8fxritR12RxIhX7SB5pJ4m13/view?usp=shari
 ![Screenshot 2023-12-19 112116](https://github.com/pengwingokla/CS388-Project-5-6-BitFit/assets/96941717/bec9ab00-c2ac-48da-8b99-d265362602cc)
 ![Screenshot 2023-12-19 112103](https://github.com/pengwingokla/CS388-Project-5-6-BitFit/assets/96941717/cd4f8210-19bf-4b27-a69b-816ac43f2065)
 ![Screenshot 2023-12-19 112357](https://github.com/pengwingokla/CS388-Project-5-6-BitFit/assets/96941717/1537d328-8678-4032-a65d-fef985e746ff)
-
+![Screenshot 2023-12-19 112202](https://github.com/pengwingokla/CS388-Project-5-6-BitFit/assets/96941717/d03188db-3861-4ec6-99e9-cb4c3aaa5087)
 
 ## Notes
 
