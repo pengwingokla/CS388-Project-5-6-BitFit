@@ -30,9 +30,11 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-
-<img src='https://drive.google.com/file/d/1JrNVV8kF8fxritR12RxIhX7SB5pJ4m13/view?usp=sharing' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 https://drive.google.com/file/d/1JrNVV8kF8fxritR12RxIhX7SB5pJ4m13/view?usp=sharing
+
+![bitfit-screenshots](https://github.com/pengwingokla/CS388-Project-5-6-BitFit/assets/96941717/1286777c-1a57-49a2-8d75-ad5e91d914be)
+![bitfit-screenshots (1)](https://github.com/pengwingokla/CS388-Project-5-6-BitFit/assets/96941717/c1f01a6e-2542-4970-94f9-bd2ead7b21a3)
+
 
 
 ## Notes
